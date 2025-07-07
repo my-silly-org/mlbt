@@ -1,7 +1,7 @@
 # mlbt
 
 [![CI](https://github.com/andschneider/mlbt/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/andschneider/mlbt/actions/workflows/ci.yml)
-[![dependency status](https://deps.rs/repo/github/mlb-rs/mlbt/status.svg)](https://deps.rs/repo/github/mlb-rs/mlbt)
+[![dependency status](https://deps.rs/repo/github/my-silly-org/mlbt/status.svg)](https://deps.rs/repo/github/my-silly-org/mlbt)
 [![Built With Ratatui](https://ratatui.rs/built-with-ratatui/badge.svg)](https://ratatui.rs/)
 
 A terminal user interface for the MLB Statcast API, written in Rust.
@@ -17,6 +17,7 @@ Check scores, standings, and stats. Even watch a live game using Gameday!
     - [Homebrew](#homebrew)
     - [Binaries](#binaries)
     - [Cargo](#cargo)
+    - [Docker](#docker)
 - [Features](#features)
 - [Usage](#usage)
     - [Scoreboard](#scoreboard)
@@ -80,7 +81,18 @@ cargo install mlbt --path .
 
 ### Docker
 
-Build image with:
+`mlbt` [publishes docker images on ghcr](https://github.com/my-silly-org/mlbt/pkgs/container/mlbt).
+```bash
+docker run -it --rm --name mlbt ghcr.io/my-silly-org/mlbt
+```
+
+`mlbt` follows [semver](https://semver.org/) practices.
+You can execute individual releases explicitly.
+```bash
+docker run -it --rm --name mlbt ghcr.io/my-silly-org/mlbt:v0.0.18
+```
+
+Alternately build the `mlbt` image with:
 
 ```bash
 docker build -t mlbt .
