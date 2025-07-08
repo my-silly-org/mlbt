@@ -1,4 +1,4 @@
-FROM rust:1.88 AS builder
+FRO rust:1.88 AS builder
 LABEL org.opencontainers.image.source=https://github.com/my-silly-org/mlbt
 LABEL org.opencontainers.image.description="A terminal user interface for the MLB Statcast API, written in Rust."
 LABEL org.opencontainers.image.licenses=MIT
